@@ -4,6 +4,9 @@
 using namespace std;
 
 const float PI = 3.14159;
+const short int Y_DAYS = 365;
+const short int WEEk_DAYS = 7;
+
 
 int main()
 {
@@ -71,5 +74,8 @@ int main()
 	*	¬ам необходимо посчитать количество целых недель в году.
 	*	ќбъ€вите переменную подход€щего типа и проинициализируйте ее с помощью ранее объ€вленных констант
 	*/
+
+	float pp = PI;
+
 
 }
