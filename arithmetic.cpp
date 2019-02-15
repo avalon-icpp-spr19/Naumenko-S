@@ -15,17 +15,15 @@ int main()
 	* 321						6
 	* 528						15
 	*/
-
-	/*int chislo, dec, one, hund, sum;
+	int chislo, dec, one, hund, sum;
 	cout << "chislo = ";
 	cin >> chislo;
-	cout << endl;
 	one = chislo % 10;
 	dec = (chislo / 10) % 10;
 	hund = chislo / 100;
 	sum = one + dec + hund;
-	cout << "sum = " << sum;
-	*/
+	cout << "sum = " << sum << endl;
+	
 
 	/*
 	* Упражнение 2
@@ -36,9 +34,7 @@ int main()
 	* 1 1 1 2 2 2				3661
 	* 2 20 20 3 20 20			3600
 	* 23 30 00 23 59 59			1799
-	*/
-
-	/*
+	*/	
 	int hour, min, sec, hour2, min2, sec2, delta, sum_sec, sum_sec2;
 	cout << "hour = ";
 	cin >> hour;
@@ -55,8 +51,8 @@ int main()
 	sum_sec = (hour * 60 * 60) + (min * 60) + sec;
 	sum_sec2 = (hour2 * 60 * 60) + (min2 * 60) + sec2;
 	delta = sum_sec2 - sum_sec;
-	cout << "delta = " << delta;
-	*/
+	cout << "delta = " << delta << endl;
+	
 
 	/* Упражнение 3
 	Посчитать Юлианскую дату
@@ -70,9 +66,6 @@ int main()
 	1 6 2000					    2451697
 	21 12 2012					  2456283
 	*/
-
-	
-	/*
 	int day, month, year, a, m, y, JND;
 	cout << "day = ";
 	cin >> day;
@@ -83,10 +76,10 @@ int main()
 	a = ((14 - month) / 12);
 	y = year + 4800 - a;
 	m = month + 12 * a - 3;
-	JND = day + ((153 * m + 2)/5) + (365 * y) 
+	JND = day + ((153 * m + 2)/5) + (365 * y)
 		+ (y/4) - (y/100) + (y/400) - 32015;
 	cout << "JND = " << JND;
-	*/
+	
 
 	/* Упражнение 4
 	* Электронные часы показывают время в формате h:mm:ss (от 0:00:00 до 23:59:59),
@@ -100,17 +93,14 @@ int main()
 	* 12200					    3:23:20
 	* 86000					    23:53:20
 	*/
-
-
-	int h, mm, ss, sec;
-	cin >> sec;
-	h = sec / 3600;
-	mm = (sec / 60) - (h * 3600);
-	ss = sec - (mm * 60 + h * 60);
-
-	cout << h << ":" << mm / 10 << mm % 10 << 
-		":" << ss / 10 << ss % 10;
-	
+	int h, mm, ss;
+	cin >> ss;
+	h = ss / 3600;
+	ss -= (h * 3600);
+	mm =  (sec / 60);
+	ss -= mm * 60;
+	cout << h << ":" << mm / 10 << mm % 10 <<
+		":" << ss / 10 << ss % 10 << endl;
 
 
 	/* Упражнение 5
@@ -122,12 +112,9 @@ int main()
 	* 111					112
 	* 112					114
 	*/
-
-	/*
 	int N;
 	cin >> N;
-	cout << N + (N % 2) + ((N % 2 - 1) * (-2));
-	*/
+	cout << N + (N % 2) + ((N % 2 - 1) * (-2)) << endl;
 	
 
 	/* Упражнение 6
@@ -138,16 +125,14 @@ int main()
 	* 2002						1
 	* 2018						не 1
 	* 42						  не 1
-	* 220						  1
+	* 220						не 1
 	* 9999						1
 	*/
-
-
-	int chislo, d1, d2;
-	cin >> chislo;
-	d1 = chislo / 100;
-	d2 = ((chislo % 10) * 10) + (chislo / 100 % 10);
-	cout << d2 / d1;
+	int chisl, d1, d2;
+	cin >> chisl;
+	d1 = chisl / 100;
+	d2 = ((chisl % 10) * 10) + (chisl / 100 % 10);
+	cout << d2 - d1 + 1 << endl;
 
 	/* Дополнительное упражнение (будет оцениваться отдельно)
 	* Улитка ползет по вертикальному шесту высотой H метров, поднимаясь за день на A метров, а за ночь спускаясь на B метров.
@@ -159,5 +144,13 @@ int main()
 	* 80	7	3			20
 	*/
 
-
+	/*int H, A, B, days;
+	cout << "H = ";
+	cin >> H;
+	cout << "A = ";
+	cin >> A;
+	cout << "B = ";
+	cin >> B;
+	days = (H - B*(B - A)) / (A - B);
+	cout << days;*/
 }
