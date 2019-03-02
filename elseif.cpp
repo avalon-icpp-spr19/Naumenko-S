@@ -16,7 +16,7 @@ int main()
 	7 10 3						Нет
 	4 5 8						Да
 	*/
-	/*int A, B, C, max, AB;
+	int A, B, C, max, AB;
 	cout << "A = "; cin >> A;
 	cout << "B = "; cin >> B;
 	cout << "C = "; cin >> C;
@@ -42,7 +42,7 @@ int main()
 	else
 	{
 		cout << "Нет" << endl;
-	}*/
+	}
 
 	/* Задание 2
 	Напишите код, правильно склоняющий существительное «рублей» следующее за указанным числительным.
@@ -55,7 +55,7 @@ int main()
 	101					рубль
 	1255					рублей
 	*/
-	/*int rub;
+	int rub;
 	cout << "rub = ";
 	cin >> rub;
 	switch (rub % 100)
@@ -83,7 +83,7 @@ int main()
 			break;
 		}	
 		break;
-	}*/
+	}
 
 
 	/* Задание 3
@@ -129,7 +129,7 @@ int main()
 	1 5 5				5
 	4 5 6				4
 	*/
-	/*int Me, V, P;
+	int Me, V, P;
 	cout << "Ваш балл: "; cin >> Me;
 	cout << "Петя: "; cin >> P;
 	cout << "Вася: "; cin >> V;
@@ -147,7 +147,7 @@ int main()
 		{
 			cout << Me;
 		}
-	}*/
+	}
 
 	/* Задание 5
 	Написать логику, которая проверяет возможность существования даты по введенным пользователем данных.
@@ -164,7 +164,7 @@ int main()
 	29 2 1900					false
 	29 2 2000					true
 	*/
-	/*unsigned int year, day, month;
+	unsigned int year, day, month;
 	cout << "День: "; cin >> day;
 	cout << "Месяц: "; cin >> month;
 	cout << "Год: "; cin >> year;
@@ -183,7 +183,7 @@ int main()
 	else
 	{
 		cout << "false";
-	}*/
+	}
 
 
 	/* Задание 6
@@ -199,7 +199,7 @@ int main()
 	18 71						false
 	23 67						true
 	*/
-	/*int koor1, koor2, x11, x12, x21, x22;
+	int koor1, koor2, x11, x12, x21, x22;
 	cout << "начальные координаты: ";
 	cin >> koor1;
 	cout << "Конечные координаты: ";
@@ -214,5 +214,5 @@ int main()
 	else
 	{
 		cout << "false";
-	}*/
+	}
 }
