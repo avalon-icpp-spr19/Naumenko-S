@@ -18,7 +18,7 @@ int num_correct(float min, float max, float num)
 	{
 		if (num < min || num > max)
 		{
-			cout << "Çíà÷íèå íåêîððåòíî. Ââåäèòå çàíîâî: ";
+			cout << "Ã‡Ã­Ã Ã·Ã­Ã¨Ã¥ Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥Ã²Ã­Ã®. Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã­Ã®Ã¢Ã®: ";
 			cin >> num;
 		}
 		else
@@ -34,10 +34,10 @@ int main()
 	setlocale(LC_ALL, "rus");
 	float procent = 0;
 	int simulations = 0;
-	cout << "Ââåäèòå æåëàåìûé ïðîöåíò ñîâïàäåíèÿ äíåé ðîæäåíèÿ (îò 0.1 äî 99.9): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¦Ã¥Ã«Ã Ã¥Ã¬Ã»Ã© Ã¯Ã°Ã®Ã¶Ã¥Ã­Ã² Ã±Ã®Ã¢Ã¯Ã Ã¤Ã¥Ã­Ã¨Ã¿ Ã¤Ã­Ã¥Ã© Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿ (Ã®Ã² 0.1 Ã¤Ã® 99.9): ";
 	cin >> procent;
 	procent = num_correct(0.1, 99.9, procent);
-	cout << "Ââåäèòå êèëè÷åñòâî ñèìóëÿöèé (îò 100 äî 100000): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ¨Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã¨Ã¬Ã³Ã«Ã¿Ã¶Ã¨Ã© (Ã®Ã² 100 Ã¤Ã® 100000): ";
 	cin >> simulations;
 	simulations = num_correct(100, 100000, simulations);
 	float simulate_procent = 0;
@@ -48,7 +48,7 @@ int main()
 		for(int k = 1; k <= simulations; k++)
 		{		
 			Date * birthdays = new Date[i];
-			for (int j = 0; j < i; j++) //èíèöèàëèçàöèÿ ìàññèâà
+			for (int j = 0; j < i; j++) //Ã¨Ã­Ã¨Ã¶Ã¨Ã Ã«Ã¨Ã§Ã Ã¶Ã¨Ã¿ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã 
 			{
 				birthdays[j].year = GetRandomValue(1, 2019);
 				birthdays[j].day = GetRandomValue(1, 31);
@@ -82,7 +82,7 @@ int main()
 			}
 			bool success = false;
 			bool success_three = false;
-			for (int j = 0; j < i; ++j) //ïðîâåðêà ñîâïàäåíèé
+			for (int j = 0; j < i; ++j) //Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã±Ã®Ã¢Ã¯Ã Ã¤Ã¥Ã­Ã¨Ã©
 			{
 				for (int k = 0; k < i; ++k)
 				{
@@ -98,11 +98,11 @@ int main()
 		simulate_procent = static_cast<float>(succeed_op) /	static_cast<float>(simulations) * 100;
 		if (simulate_procent > procent)
 		{
-			cout << "Óêàçàííàÿ âåðîÿòíîñòü ñîâïàäåíèÿ äíåé ðîæäåíèÿ äîñòèãíóòà â ãðóïïå ðàçìåðîì " << i << " ÷åëîâåê" << endl;
+			cout << "Ã“ÃªÃ Ã§Ã Ã­Ã­Ã Ã¿ Ã¢Ã¥Ã°Ã®Ã¿Ã²Ã­Ã®Ã±Ã²Ã¼ Ã±Ã®Ã¢Ã¯Ã Ã¤Ã¥Ã­Ã¨Ã¿ Ã¤Ã­Ã¥Ã© Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿ Ã¤Ã®Ã±Ã²Ã¨Ã£Ã­Ã³Ã²Ã  Ã¢ Ã£Ã°Ã³Ã¯Ã¯Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã°Ã®Ã¬ " << i << " Ã·Ã¥Ã«Ã®Ã¢Ã¥Ãª" << endl;
 
 			break;
 		}
-		cout << "Â ãðóïïå ðàçìåðîì " << i << " ÷åëîâåê, äîñòèãíóòà âåðîÿòíîñòü â " << static_cast<float>(succeed_op) /
+		cout << "Ã‚ Ã£Ã°Ã³Ã¯Ã¯Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã°Ã®Ã¬ " << i << " Ã·Ã¥Ã«Ã®Ã¢Ã¥Ãª, Ã¤Ã®Ã±Ã²Ã¨Ã£Ã­Ã³Ã²Ã  Ã¢Ã¥Ã°Ã®Ã¿Ã²Ã­Ã®Ã±Ã²Ã¼ Ã¢ " << static_cast<float>(succeed_op) /
 				static_cast<float>(simulations) * 100 << "%" << endl;			
 		i++;
 	}
